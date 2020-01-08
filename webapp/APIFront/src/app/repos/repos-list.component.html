@@ -1,0 +1,51 @@
+<div class='card'>
+    <div class='card-header'>
+        {{pageTitle}}
+    </div>
+    <div class='card-body'>
+        <div class ='row'>
+            <div class ='col-md-2'>Dev Language :</div>
+            <div class ='col-md-4'>
+                <!-- <input type='text'
+                [(ngModel)]='listFilter'/> -->
+                <select class="form-control" [(ngModel)]='listFilter'>
+                    <option value="" disabled selected>Select an option</option>
+                    <option>Go</option>
+                    <option>Java</option>
+                    <option>Python</option>
+                    <option>JavaScript</option>
+                </select>
+            </div>
+            <div class='col-md-4'>
+                <button class='btn btn-outline-secondary'
+                        (click)='OnSearch()'
+                        style='width:80px'> Search
+                </button>
+              </div>
+        </div>
+        <div class='table-responsive'>
+            <table class='table'
+                *ngIf='items && items.length'>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Owner</th>
+                        <th>Url</th>
+                        <th>Stars</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor='let item of items'>
+                        <td>{{ item.name }}</td>
+                        <td>{{ item.description }}</td>
+                        <td>{{ item.owner.login }}</td>
+                        <td>{{ item.html_url }}</td>
+                        <td>{{ item.stargazers_count }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+</div>
