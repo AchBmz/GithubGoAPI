@@ -54,6 +54,11 @@ Developed with Angular to interact with the Backend server
 - Configure Backend to accept call from Frontend
 - Display return on console
 
-*Tuesday 06-01-2020*
+*Tuesday 07-01-2020*
 - Work on Angular componenet to display returned values
+- Edit Readme file
+
+*Wednesday 08-01-2020*
+- Create service package
+- Update Frontend
 - Edit Readme file
